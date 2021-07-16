@@ -44,4 +44,42 @@ const shoppingList = [
     },
 ]
 
+// create new function to add to shopping list exercise
+
+const addToShoppingList = (groceryItem) => {
+    //logic below to figure out where in the array we are (last index = last id used)
+    const lastIndex = shoppingList.length - 1;
+    const currentLastGroceryItem = shoppingList[lastIndex];
+    const maxId = currentLastGroceryItem.id;
+
+    // adding to maxId (value we found with above logic)
+    const idForNewGroceryItem = maxId + 1;
+
+    // assigning that maxId value to our new groceryItem
+    groceryItem.id = idForNewGroceryItem
+
+    // did some research to find a way to add a datestamp to my item, came up with this.
+    groceryItem.dateCreated = Date()
+    
+    // pushing that new groceryItem to array
+    shoppingList.push(groceryItem)
+}
+
+const wine = {
+    name: "Red Wine",
+    price: 6.99,
+    buyAt: "Trader Joe's",
+    perishable: false,
+}
+
+addToShoppingList(wine);
+
+const chocolate = {
+    name: "Chocolate",
+    price: 1.99,
+    buyAt: "Trader Joe's"
+}
+
+addToShoppingList(chocolate);
+
 console.log(shoppingList);
