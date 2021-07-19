@@ -108,7 +108,16 @@ addToShoppingList(toothbrushHeads)
 
 // Write a for loop with if statement to only log items that cost more than $8
 
-for (const item of shoppingList) {
-    if (item.price > 8) {
-    console.log(`The ${item.name} cost ${item.price}`)}
+const expensiveGroceryItems = () => {
+    const expensiveItems = []
+
+    for (const groceryItem of shoppingList) {
+        if (groceryItem.price > 8) {
+            expensiveItems.push(groceryItem)
+        }
+    }
+
+    return expensiveItems
 }
+
+console.log(expensiveGroceryItems())
