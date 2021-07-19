@@ -82,4 +82,33 @@ const chocolate = {
 
 addToShoppingList(chocolate);
 
-console.log(shoppingList);
+const trashBags = {
+    name: "Trash Bags 13-gallon",
+    price: 9.49,
+    buyAt: "Kroger"
+}
+
+const coffee = {
+    name: "Trader Joe's Medium Blend",
+    price: 3.99,
+    buyAt: "Trader Joe's"
+}
+
+const toothbrushHeads = {
+    name: "Oral-B Toothbrush Heads",
+    price: 15.99,
+    buyAt: "Kroger"
+}
+
+addToShoppingList(trashBags)
+addToShoppingList(coffee)
+addToShoppingList(toothbrushHeads)
+
+// console.log(shoppingList)
+
+// Write a for loop with if statement to only log items that cost more than $8
+
+for (const item of shoppingList) {
+    if (item.price > 8) {
+    console.log(`The ${item.name} cost ${item.price}`)}
+}
